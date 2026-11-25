@@ -20,8 +20,8 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource("classpath: application.properties")
-@ComponentScan(value =  "org.Andrey.Bec.Model")
+@PropertySource("classpath:application.properties")
+@ComponentScan(value =  "org.Andrey.Bec")
 public class BecConfig {
 
     @Autowired
