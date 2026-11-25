@@ -18,7 +18,7 @@ public class MainTest {
     @Test
     public void createUserBulder(){
         try {
-            User userTest = User.builder().name("Andrey").lastName("Pushkov").email("a.pushkov@vodokomfort.ru").role(Role.ADMIN).build();
+            User userTest = User.builder().name("Hatalia").lastName("Pushkov").email("h.pushkov@vodokomfort.ru").role(Role.ADMIN).build();
             System.out.println("Пользователь создан " + userTest.toString() );
         } catch (Exception e){
             System.out.println("Неправильная создание пользователя");
@@ -27,7 +27,7 @@ public class MainTest {
 
     @Test
     public void saveUser(){
-        User userTest = User.builder().name("Andrey").lastName("Mashinin").email("a.pushkov@vodokomfort.ru").role(Role.ADMIN).build();
+        User userTest = User.builder().name("Hatalia").lastName("Pushkov").email("h.pushkov@vodokomfort.ru").role(Role.ADMIN).build();
         userService.save(userTest);
         System.out.println("Пользователь сохранен: ОК!");
     }
@@ -41,7 +41,7 @@ public class MainTest {
 
     @Test
     public void deleteUser(){
-        userService.delete(5L);
+        userService.delete(6L);
         System.out.println("Пользователь удален: ОК!");
     }
 
