@@ -4,7 +4,6 @@ package org.Andrey.Bec.Model;
 import org.Andrey.Bec.Model.NoEntity.Role;
 
 import javax.persistence.*;
-import java.math.BigInteger;
 
 @Entity
 @Table(name = "users")

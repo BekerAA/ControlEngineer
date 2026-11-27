@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --muted: #77777d;
+  --line: #e9e9eb;
+  --accent: #087eff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fbfbfd;
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: min(1080px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(56px, 10vh, 112px) 0 28px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: center;
+  gap: clamp(42px, 8vw, 100px);
+}
+
+.copy { max-width: 520px; }
+
+.eyebrow {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(44px, 6.2vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -.065em;
+  font-weight: 600;
+}
+
+.description {
+  max-width: 450px;
+  margin: 28px 0 30px;
+  color: #65656b;
+  font-size: clamp(16px, 1.7vw, 18px);
+  line-height: 1.75;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 19px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.contact:hover { transform: translateY(-2px); background: #006de0; }
+
+.portrait-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #e9edf3, #d9dee7);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(58px, 9vw, 100px);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.interests span {
+  padding: 10px 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #55555b;
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 70px;
+  color: #a0a0a5;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .page { width: min(100% - 36px, 520px); padding-top: 44px; }
+  .intro { grid-template-columns: 1fr; gap: 34px; }
+  .copy { order: 1; }
+  .portrait-wrap { order: 2; max-height: 520px; aspect-ratio: 5 / 4; }
+  .interests { margin-top: 48px; }
+  footer { margin-top: 48px; }
+}
